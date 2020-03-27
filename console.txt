@@ -1,0 +1,4 @@
+curl -X POST -u "apikey:zPJij17cD8uAVUsaWqRgZPyGt9CH5q8XuwNGurfFhtXW" \
+--header "Content-Type: audio/flac" \
+--data-binary @first_test.flac \
+"https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?smart_formatting=true&speaker_labels=true" > watson.json
