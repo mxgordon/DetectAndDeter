@@ -28,7 +28,7 @@ except ImportError:
 #### Initalize queue to store the recordings ##
 ###############################################
 CHUNK = 1024
-# Note: It will discard if the websocket client can't consumme fast enough
+# Note: It will discard if the websocket client can't consume fast enough
 # So, increase the max size as per your choice
 BUF_MAX_SIZE = CHUNK * 10
 # Buffer to store audio
@@ -56,13 +56,14 @@ class MyRecognizeCallback(RecognizeCallback):
         RecognizeCallback.__init__(self)
 
     def on_transcription(self, transcript):
-        self.last = transcript[0]['transcript'].strip()
+        print(transcript)
+        # self.last = transcript[0]['transcript'].strip()
         # pred = Process(target=predict_text, args=self.last)
         # pred.start()
         # pred.join()
         # prediction = predict_text(self.last)
         # print("Pronting")
-        print("\r--> ", transcript[0]['transcript'])
+        # print("\r--> ", transcript[0]['transcript'])
         # print("\r--> ", transcript[0]['transcript'], "--",  predict_text(transcript[0]))
 
     def on_connected(self):
@@ -78,17 +79,20 @@ class MyRecognizeCallback(RecognizeCallback):
         print('Service is listening')
 
     def on_hypothesis(self, hypothesis):
-        # print('.....')
-        if hypothesis.strip() != self.last:
-            print('\r', hypothesis, sep='', end='')
-            sys.stdout.flush()
+        # # print('.....')
+        # if hypothesis.strip() != self.last:
+        #     print('\r', hypothesis, sep='', end='')
+        #     sys.stdout.flush()
+        print(hypothesis)
+        # pass
 
     def on_data(self, data):
+        print(data)
         # try:
         #     print(data['results'][0]['alternatives']["confidence"])
         # except:
         #     pass
-        pass
+        # pass
 
     def on_close(self):
         print("Connection closed")
