@@ -12,6 +12,8 @@ from recog_callback import RecognizeCallback1 as MyRecognizeCallback
 # Watson websocket prints justs too many debug logs, so disable it
 logging.disable(logging.CRITICAL)
 
+# https://www.satishchandragupta.com/tech/speech-recognition-with-python.html
+
 # Chunk and buffer size
 CHUNK_SIZE = 4096
 BUFFER_MAX_ELEMENT = 10
