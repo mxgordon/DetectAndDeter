@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: detectanddeter
+Formal-Name: DetectAndDeter
+App-ID: com.example.detectanddeter
+Version: 0.0.1
+Home-page: https://example.com/detectanddeter
+Author: Max Gordon
+Author-email: mgordon291us@gmail.com
+Summary: Uses deep learning to detect and deter telemarketers
