@@ -5,17 +5,17 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
-    flavorDimensions "abi"
-    productFlavors {
-        arm {
-            dimension "abi"
-            ndk { abiFilters "armeabi-v7a" }
-        }
-        x86 {
-            dimension "abi"
-            ndk { abiFilters "x86" }
-        }
-    }
+//    flavorDimensions "abi"
+//    productFlavors {
+//        arm {
+//            dimension "abi"
+//            ndk { abiFilters "armeabi-v7a" }
+//        }
+//        x86 {
+//            dimension "abi"
+//            ndk { abiFilters "x86" }
+//        }
+//    }
 
     defaultConfig {
         applicationId "com.example.detectanddeter"
@@ -31,8 +31,32 @@ android {
         }
 
         python {
+            staticProxy "hello"
+
             buildPython "C:/Users/Max/Anaconda3/envs/nlp/python.exe"
-            buildPython "py -3.6"
+
+            pip {
+                options "--no-deps"
+                install "-r", "libs/requirements.txt"
+                install "ChatterBot"
+                install "chaquopy-openblas"
+                install "chaquopy-libgfortran"
+                install "chaquopy-freetype"
+                install "chaquopy-libcxx"
+                install "numpy"
+                install "pandas"
+                install "spacy"
+                install "thinc"
+                install "srsly"
+                install "preshed"
+                install "blis"
+                install "catalogue"
+                install "matplotlib"
+                install "kiwisolver"
+            }
+//            pip {
+//                install "matplotlib"
+//            }
         }
     }
 
