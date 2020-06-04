@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/inputBox"
         android:layout_width="193dp"
         android:layout_height="47dp"
         android:layout_marginStart="16dp"
@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Test"
+        android:text="@string/test"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +25,8 @@
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="Button"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
-        app:layout_constraintStart_toEndOf="@+id/editText" />
+        android:onClick="doSomething"
+        android:text="@string/button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/inputBox"
+        app:layout_constraintStart_toEndOf="@+id/inputBox" />
 </androidx.constraintlayout.widget.ConstraintLayout>
