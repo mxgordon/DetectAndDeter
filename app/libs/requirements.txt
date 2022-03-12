@@ -21,7 +21,7 @@ murmurhash==1.0.2
 nltk==3.5
 nvidia-ml-py3==7.352.0
 packaging==20.3
-Pillow==7.0.0
+Pillow==9.0.1
 Pint==0.11
 plac==0.9.6
 PyJWT==1.7.1
